@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>
+			Trabalhando grid
+		</title>
+	</head>
+	<body>
+	<style>
+
+     *{
+        margin: 0;
+        padding: 0;
+     }   
+	#main{
+        display:grid;
+        grid-template-rows: 100vh 100vh 100vh 100vh;
+        grid-template-areas: "header header" "nav nav" "article aside" "footer footer";}	
+		
+        .mainHeader{grid-area: header; background-color: gray;}
+        .mainNav{grid-area: nav; background-color: yellow;}
+        .mainContent{grid-area: article; background-color: red;}
+        .mainAside{grid-area: aside; background-color: green;}
+        .mainFooter{grid-area: footer; background-color: orange;}
+
+	#menu{ 
+		display: grid;
+		position: fixed;
+		float: left;
+        background-color: white;
+        width: 100%;
+        height: 40px;		
+		line-height: 40px; 
+		text-align: center;
+    }
+	
+    menu ul{
+        list-style: none;		
+    }
+
+    #menu ul li{
+        display: inline;
+		margin-right: 45px;
+    }
+	
+    #ajuste{		
+        width:100%;
+        height: 40px;
+        background-color: pink;
+    }
+	
+
+    </style> 
+			
+            <header id="menu">	
+			
+				<nav>					
+					<ul><li>kk</li>
+						<li>Home</li>                    
+						<li>Quem Somos</li>
+						<li>Contato</li>
+					</ul>
+				</nav>
+
+			
+
+            </header>
+			<div id="ajuste"></div>
+            <section id="main">
+                <header class="mainHeader">Header</header>
+				
+		        <nav class="mainNav">Nav</nav>
+                <article class="mainContent">Content</article>
+                <aside class="mainAside">Aside</aside>
+                <footer class="mainFooter">Footer</footer>
+            </section>
+		<!-- https://www.w3schools.com/css/css_rwd_viewport.asp -->
+		</body>
+	</html>
+	
